@@ -1,0 +1,15 @@
+use_frameworks!
+source 'https://github.com/CocoaPods/Specs.git'
+source 'http://47.97.81.97:81/r/wangxiao/mobile_frame/xt_repo.git'
+
+platform :ios, '8.0'
+
+target 'XTFoundation_Example' do
+  pod 'XTFoundation', :path => '../'
+
+  target 'XTFoundation_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

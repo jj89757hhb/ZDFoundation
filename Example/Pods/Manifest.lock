@@ -1,0 +1,25 @@
+PODS:
+  - XTFoundation (0.0.9):
+    - XTFoundation/XTCategory (= 0.0.9)
+    - XTFoundation/XTDefine (= 0.0.9)
+    - XTFoundation/XTUtils (= 0.0.9)
+  - XTFoundation/XTCategory (0.0.9):
+    - XTFoundation/XTDefine
+  - XTFoundation/XTDefine (0.0.9)
+  - XTFoundation/XTUtils (0.0.9):
+    - XTFoundation/XTCategory
+    - XTFoundation/XTDefine
+
+DEPENDENCIES:
+  - XTFoundation (from `../`)
+
+EXTERNAL SOURCES:
+  XTFoundation:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XTFoundation: f40630fdbcd9ec61e2e5eeed77c5ded459f49401
+
+PODFILE CHECKSUM: 11befc2572166b54310a958ab9dad70274ecf68c
+
+COCOAPODS: 1.7.1
