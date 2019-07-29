@@ -7,8 +7,8 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'XTFoundation'
-  s.version          = '0.0.1'
+  s.name             = 'ZDFoundation'
+  s.version          = '0.0.2'
   s.summary          = '核心库'
 
 # This description is used to generate tags and improve search results.
