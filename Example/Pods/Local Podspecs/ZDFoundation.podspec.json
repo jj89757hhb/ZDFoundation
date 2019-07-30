@@ -1,0 +1,22 @@
+{
+  "name": "ZDFoundation",
+  "version": "0.0.3",
+  "summary": "A short description of ZDFoundation.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jj89757hhb/ZDFoundation",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "jj89757hhb": "jj89757hhb.happy@163.com"
+  },
+  "source": {
+    "git": "https://github.com/jj89757hhb/ZDFoundation.git",
+    "tag": "0.0.3"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "ZDFoundation/Classes/**/*"
+}
