@@ -1,5 +1,5 @@
 PODS:
-  - ZDFoundation (0.0.5)
+  - ZDFoundation (0.0.6)
 
 DEPENDENCIES:
   - ZDFoundation (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ZDFoundation: a5871090948eebb8f8da37ff8da7c3810366bab1
+  ZDFoundation: e7f596a4fa664ff9dab28104fe93d28a2e158b64
 
 PODFILE CHECKSUM: b9d41f47280182779eec23b18e17fd0e5d5211a5
 
