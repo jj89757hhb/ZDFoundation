@@ -82,6 +82,12 @@ NSString *const ZDRerenderTableCellNotify = @"com.xuetian.xtfoundation.notify.Re
     }
 }
 
+- (NSArray *)ZD_editActionsWithProxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath{
+    if (self.cellEditActionsBlock) {
+        return  self.cellEditActionsBlock(self, proxy, indexPath);
+    }
+    return nil;
+}
 #pragma mark ==================  ZDDataPrivate   ==================
 
 - (void)ZDBindView:(__kindof UIView *)view dataProxy:(ZDTableViewProxy <ZDTableViewProxyPrivate>*)dataProxy {

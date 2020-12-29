@@ -167,6 +167,13 @@
     ZDTableRow *row = [[self.data zd_ObjectAtIndex:indexPath.section] zd_ObjectAtIndex:indexPath.row];
     [row ZDTableViewCommitEditingStyle:editingStyle proxy:self indexPath:indexPath];
 }
+
+//扩展cell编辑的方法(比如，左滑产生“编辑、删除多个按钮”)
+- (NSArray*)tableView:(UITableView*)tableView editActionsForRowAtIndexPath:(NSIndexPath*)indexPath{
+    ZDTableRow *row = [[self.data zd_ObjectAtIndex:indexPath.section] zd_ObjectAtIndex:indexPath.row];
+    return  [row ZD_editActionsWithProxy:self indexPath:indexPath];
+}
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ZDTableRow *row = [[self.data zd_ObjectAtIndex:indexPath.section] zd_ObjectAtIndex:indexPath.row];
     [row ZDTableViewCellWillDisplay:cell proxy:self indexPath:indexPath];
