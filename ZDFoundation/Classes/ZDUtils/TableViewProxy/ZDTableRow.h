@@ -25,6 +25,8 @@ typedef BOOL (^ZDTableCellCanEditBlock)(__kindof ZDTableRow *rowData, ZDTableVie
 /// cell 编辑提交
 typedef void (^ZDTableCellCommitEditingBlock)(__kindof ZDTableRow *rowData, UITableViewCellEditingStyle editingStyle, ZDTableViewProxy *proxy, NSIndexPath *indexPath);
 
+typedef NSArray* (^ZDCellEditActionsBlock)(__kindof ZDTableRow *rowData, ZDTableViewProxy *proxy, NSIndexPath *indexPath);
+
 /// tableviewRow 协议
 @protocol ZDTableViewRowDelegate <NSObject>
 - (CGFloat)ZDTableViewCellHeightWithProxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
@@ -33,6 +35,8 @@ typedef void (^ZDTableCellCommitEditingBlock)(__kindof ZDTableRow *rowData, UITa
 - (void)ZDTableViewCellDidSelected:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
 - (BOOL)ZDTableViewCanEditRowWithProxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
 - (void)ZDTableViewCommitEditingStyle:(UITableViewCellEditingStyle)editingStyle proxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
+
+- (NSArray *)ZD_editActionsWithProxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
 @optional
 /// 将要重用
 - (void)ZDTableViewCellWillReuse:(__kindof UITableViewCell *)cell proxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
@@ -58,6 +62,8 @@ typedef void (^ZDTableCellCommitEditingBlock)(__kindof ZDTableRow *rowData, UITa
 @property (nonatomic, copy) ZDTableCellCanEditBlock cellCanEdit;
 /// cell提交编辑
 @property (nonatomic, copy) ZDTableCellCommitEditingBlock cellCommitEditing;
+///cell多个编辑按钮
+@property (nonatomic, copy) ZDCellEditActionsBlock cellEditActionsBlock ;
 
 + (instancetype)row;
 + (instancetype)rowWithID:(id<NSCopying>)rowid;

@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <ZDFoundation.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZDTestCell : UITableViewCell
 
 @end
 
+@interface ZDTestRow : ZDTableRow
+
+@end
 NS_ASSUME_NONNULL_END
