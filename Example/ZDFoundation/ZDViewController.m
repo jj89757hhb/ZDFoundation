@@ -9,6 +9,7 @@
 #import "ZDViewController.h"
 #import <ZDFoundation/ZDFoundation.h>
 #import "ZDTestCell.h"
+#import "ZDHeaderView.h"
 @interface ZDViewController ()
 @property (nonatomic,strong)  UITableView *table;
 @end
@@ -30,12 +31,26 @@
 - (void)setUpTable{
      _table = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
     [self.view addSubview:_table];
-    ZDTableSection *section = [ZDTableSection section];
+    HeaderViewSection *section = [HeaderViewSection section];
+    [section setFooterHeight:^CGFloat(__kindof ZDTableSection *sectionData, ZDTableViewProxy *proxy, NSUInteger section) {
+        return 0.01;
+    }];
+//    ZDTableSection *section = [ZDTableSection section];
     for (int i =0; i<10; i++) {
         [section addObject:[self testRow]];
     }
     _table.ZDProxy = [ZDTableViewProxy proxyWithTableView:_table];
-    [_table.ZDProxy reloadData:@[section]];
+    [_table.ZDProxy setSectionIndexTitlesForTableView:^NSArray *(UITableView *tableView) {
+        return @[@"A",@"B",@"C",@"D"
+        ];
+    }];
+    
+    [_table.ZDProxy setSectionForSectionIndexTitle:^NSInteger(NSString *title, NSInteger index) {
+        NSLog(@"index1:%d",index);
+        return index;
+    }];
+    [_table.ZDProxy reloadData:@[section,section,section,section]];
+  
 }
 
 - (ZDTestRow *)testRow{

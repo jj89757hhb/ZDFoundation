@@ -37,6 +37,10 @@ typedef NSArray* (^ZDCellEditActionsBlock)(__kindof ZDTableRow *rowData, ZDTable
 - (void)ZDTableViewCommitEditingStyle:(UITableViewCellEditingStyle)editingStyle proxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
 
 - (NSArray *)ZD_editActionsWithProxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;
+//返回索引的名称
+- (NSString *)ZD_tableViewWithProxy:(ZDTableViewProxy *)proxy titleForHeaderInSection:(NSInteger)section;
+
+
 @optional
 /// 将要重用
 - (void)ZDTableViewCellWillReuse:(__kindof UITableViewCell *)cell proxy:(ZDTableViewProxy *)proxy indexPath:(NSIndexPath *)indexPath;

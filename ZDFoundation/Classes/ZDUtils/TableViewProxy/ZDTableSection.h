@@ -26,6 +26,14 @@ typedef void (^ZDTableSectionPreparedBlock)(__kindof ZDTableSection *sectionData
 - (void)ZDTableViewHeader:(__kindof UITableViewHeaderFooterView *)header preparedWithProxy:(ZDTableViewProxy *)proxy section:(NSUInteger)section;
 /// 分区footer 初始化
 - (void)ZDTableViewFooter:(__kindof UITableViewHeaderFooterView *)footer preparedWithProxy:(ZDTableViewProxy *)proxy section:(NSUInteger)section;
+
+@optional
+//此方法一般不用实现，header的效果通常需要自定义的！
+- (NSString *)ZD_TitleForHeaderInSectionWithProxy:(ZDTableViewProxy *)proxy titleForHeaderInSection:(NSInteger)section;
+
+//- (NSArray *)ZD_sectionIndexTitlesForTableViewWithProxy:(ZDTableViewProxy *)proxy;
+//
+//- (NSInteger)ZD_tableViewWithProxy:(ZDTableViewProxy *)proxy sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index;
 @end
 
 

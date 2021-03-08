@@ -20,6 +20,10 @@ typedef void (^ScrollViewWillBeginZooming_withView)(UIScrollView *scrollView, UI
 typedef void (^ScrollViewWillEndDragging_withVelocity_targetContentOffset)(UIScrollView *scrollView,CGPoint velocity, CGPoint *targetContentOffset);
 typedef void (^ScrollViewDidEndDragging_willDecelerate)(UIScrollView *scrollView, BOOL decelerate);
 typedef void (^ScrollViewDidChangeAdjustedContentInset)(UIScrollView *scrollView);
+
+typedef NSArray *(^SectionIndexTitlesForTableView)(UITableView *tableView);
+
+typedef NSInteger (^SectionForSectionIndexTitle)(NSString *title ,NSInteger index);
 @interface ZDTableViewProxy : NSObject <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak, readonly) UITableView *tableView;
 @property (nonatomic, weak) id <UITableViewDataSource> dataSource;
@@ -59,6 +63,8 @@ typedef void (^ScrollViewDidChangeAdjustedContentInset)(UIScrollView *scrollView
 @property (nonatomic,copy) ScrollViewWillEndDragging_withVelocity_targetContentOffset scrollViewWillEndDragging_withVelocity_targetContentOffset;
 @property (nonatomic,copy) ScrollViewDidEndDragging_willDecelerate scrollViewDidEndDragging_willDecelerate;
 @property (nonatomic,copy) ScrollViewDidChangeAdjustedContentInset scrollViewDidChangeAdjustedContentInset;
+@property (nonatomic,copy) SectionIndexTitlesForTableView sectionIndexTitlesForTableView;
+@property (nonatomic,copy) SectionForSectionIndexTitle sectionForSectionIndexTitle;
 @end
 
 @interface UITableView (ZDTableViewProxy)

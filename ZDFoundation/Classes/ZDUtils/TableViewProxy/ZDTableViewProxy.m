@@ -173,6 +173,32 @@
     return  [row ZD_editActionsWithProxy:self indexPath:indexPath];
 }
 
+//字母索引的标题Header默认效果 --来自 UITableViewDataSource
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
+    ZDTableSection *data = [self.data zd_ObjectAtIndex:section];
+    if ([data respondsToSelector:@selector(ZD_TitleForHeaderInSectionWithProxy:titleForHeaderInSection:)]) {
+        return  [data ZD_TitleForHeaderInSectionWithProxy:self titleForHeaderInSection:section];
+    }
+    return nil;
+   
+}
+
+//返回字母当前的索引 --来自 UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index{
+    if (self.sectionForSectionIndexTitle) {
+        return self.sectionForSectionIndexTitle(title,index);
+    }
+    return 0;
+}
+
+//字母索引的集合 --来自 UITableViewDataSource
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    if (self.sectionIndexTitlesForTableView) {
+        return self.sectionIndexTitlesForTableView(tableView);
+    }//注意，如果此函数返回nil，那么右侧的索引字母是不能显示
+    return nil;
+}
+
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     ZDTableRow *row = [[self.data zd_ObjectAtIndex:indexPath.section] zd_ObjectAtIndex:indexPath.row];
     [row ZDTableViewCellWillDisplay:cell proxy:self indexPath:indexPath];

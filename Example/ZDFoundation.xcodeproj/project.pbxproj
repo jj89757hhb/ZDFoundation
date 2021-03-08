@@ -25,6 +25,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B0586DD6259ABECB00EB680D /* ZDTestCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B0586DD5259ABECB00EB680D /* ZDTestCell.m */; };
+		B0F2BB5325F5EBF80026B42A /* ZDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0F2BB5225F5EBF80026B42A /* ZDHeaderView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		A70C201B4DFF80A295B8C15F /* Pods-ZDFoundation_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDFoundation_Tests.release.xcconfig"; path = "Target Support Files/Pods-ZDFoundation_Tests/Pods-ZDFoundation_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		B0586DD4259ABECB00EB680D /* ZDTestCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDTestCell.h; sourceTree = "<group>"; };
 		B0586DD5259ABECB00EB680D /* ZDTestCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDTestCell.m; sourceTree = "<group>"; };
+		B0F2BB5125F5EBF80026B42A /* ZDHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDHeaderView.h; sourceTree = "<group>"; };
+		B0F2BB5225F5EBF80026B42A /* ZDHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDHeaderView.m; sourceTree = "<group>"; };
 		D7A63F6CCD8B866C3B014617 /* Pods_ZDFoundation_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZDFoundation_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E15C3D3EDD2450F2D79C6A1E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		E6A158C21B40BE7B7E3B4E8D /* Pods-ZDFoundation_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZDFoundation_Example.debug.xcconfig"; path = "Target Support Files/Pods-ZDFoundation_Example/Pods-ZDFoundation_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				6003F594195388D20070C39A /* Supporting Files */,
 				B0586DD4259ABECB00EB680D /* ZDTestCell.h */,
 				B0586DD5259ABECB00EB680D /* ZDTestCell.m */,
+				B0F2BB5125F5EBF80026B42A /* ZDHeaderView.h */,
+				B0F2BB5225F5EBF80026B42A /* ZDHeaderView.m */,
 			);
 			name = "Example for ZDFoundation";
 			path = ZDFoundation;
@@ -372,6 +377,7 @@
 				6003F59E195388D20070C39A /* ZDAppDelegate.m in Sources */,
 				B0586DD6259ABECB00EB680D /* ZDTestCell.m in Sources */,
 				6003F5A7195388D20070C39A /* ZDViewController.m in Sources */,
+				B0F2BB5325F5EBF80026B42A /* ZDHeaderView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
