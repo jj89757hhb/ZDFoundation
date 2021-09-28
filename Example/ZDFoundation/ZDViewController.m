@@ -48,7 +48,7 @@
     [_table.ZDProxy setSectionForSectionIndexTitle:^NSInteger(NSString *title, NSInteger index) {
         NSLog(@"index1:%d",index);
         return index;
-    }];
+    }];//注意2两个回调要写在 reload的前面
     [_table.ZDProxy reloadData:@[section,section,section,section]];
   
 }

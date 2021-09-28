@@ -12,7 +12,7 @@ UIKIT_EXTERN NSString *const kZDModelIDKey;
 NSString *ZDMakeMemoryAddressIdentify(id obj);
 
 @protocol ZDModelID <NSObject>
-- (id)identity;
+- (id)zdIdentity;
 @end
 
 @interface NSString (ZDModelID) <ZDModelID>

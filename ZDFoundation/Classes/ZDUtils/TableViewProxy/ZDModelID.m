@@ -14,25 +14,25 @@ NSString *ZDMakeMemoryAddressIdentify(id obj) {
 }
 
 @implementation NSString (ZDModelID)
-- (id)identity {
+- (id)zdIdentity {
     return self;
 }
 @end
 
 @implementation NSNumber (ZDModelID)
-- (id)identity {
+- (id)zdIdentity {
     return self;
 }
 @end
 
 @implementation NSValue (ZDModelID)
-- (id)identity {
+- (id)zdIdentity {
     return self;
 }
 @end
 
 @implementation NSDictionary (ZDModelID)
-- (id)identity {
+- (id)zdIdentity {
     return [self objectForKey:kZDModelIDKey];
 }
 @end

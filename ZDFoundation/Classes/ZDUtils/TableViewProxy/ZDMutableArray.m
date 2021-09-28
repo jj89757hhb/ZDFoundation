@@ -112,7 +112,7 @@
 /// 从字典里设置一个匹配的对象
 - (void)_setObjectToDictionaryIfNeeded:(id)object {
     if ([object conformsToProtocol:@protocol(ZDModelID)]) {
-        id identity = [object identity];
+        id identity = [object zdIdentity];
         if (!identity) {
             return;
         }
@@ -128,7 +128,7 @@
 /// 从字典里移除一个匹配的对象
 - (void)_removeObjectInDictionaryIfNeeded:(id)object {
     if ([object conformsToProtocol:@protocol(ZDModelID)]) {
-        id identity = [object identity];
+        id identity = [object zdIdentity];
         if (!identity) {
             return;
         }
